@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1A4870;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WorkoutController">
+   <children>
+      <Pane layoutX="14.0" layoutY="16.0" prefHeight="368.0" prefWidth="572.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Separator layoutX="161.0" orientation="VERTICAL" prefHeight="368.0" prefWidth="7.0" />
+            <Separator layoutX="-1.0" layoutY="134.0" prefHeight="3.0" prefWidth="572.0" />
+            <Text layoutX="31.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FITNESS" wrappingWidth="172.699951171875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Text>
+            <Text layoutX="31.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRACKER" wrappingWidth="97.99999999999977">
+               <font>
+                  <Font size="24.0" />
+               </font></Text>
+            <Button layoutY="134.0" mnemonicParsing="false" onAction="#handelUser" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: trans;" text="User">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button layoutY="170.0" mnemonicParsing="false" onAction="#handelWorkout" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: #1A4870;" text="Workout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button layoutY="206.0" mnemonicParsing="false" onAction="#handelCategory" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: trans;" text="Category">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button layoutY="330.0" mnemonicParsing="false" onAction="#handelLogout" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: red;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <TextField fx:id="name" layoutX="172.0" layoutY="57.0" prefHeight="25.0" prefWidth="160.0" promptText="Name" />
+            <Button layoutX="499.0" layoutY="104.0" mnemonicParsing="false" onAction="#handelDelete" prefHeight="30.0" prefWidth="65.0" text="Delete" />
+            <Button layoutX="411.0" layoutY="104.0" mnemonicParsing="false" onAction="#handelUpdate" prefHeight="30.0" prefWidth="65.0" text="Update" />
+            <Button layoutX="323.0" layoutY="104.0" mnemonicParsing="false" onAction="#handelInsert" prefHeight="30.0" prefWidth="65.0" text="Insert" />
+            <TableView fx:id="workoutTable" layoutX="170.0" layoutY="140.0" prefHeight="223.0" prefWidth="396.0" style="-fx-background-radius: 10;">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="57.5999755859375" text="Id" />
+                <TableColumn fx:id="user" prefWidth="132.0" text="Name" />
+                  <TableColumn fx:id="time" prefWidth="82.4000244140625" text="Duration" />
+                  <TableColumn fx:id="calorie" prefWidth="126.39990234375" text="Calories_Burned" />
+              </columns>
+            </TableView>
+            <TextField fx:id="duration" layoutX="349.0" layoutY="57.0" prefHeight="25.0" prefWidth="98.0" promptText="duration" />
+            <TextField fx:id="calories" layoutX="465.0" layoutY="57.0" prefHeight="25.0" prefWidth="98.0" promptText="calories" />
+            <Text layoutX="198.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track your progress , transform your life one step at a time .....">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="61.0" fitWidth="71.0" layoutX="46.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>
